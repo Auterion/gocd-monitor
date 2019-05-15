@@ -18,7 +18,7 @@
 body {
   font-family: 'Roboto';
   font-size: 30px;
-  background: #030203;
+  background: #434243;
 }
 
 #passed {
@@ -60,7 +60,7 @@ body {
   bottom: 0;
   width: 0;
   height: 0;
-  border-left: 70px solid #030203;
+  border-left: 70px solid #434243;
   border-top: 70px solid transparent;
   border-bottom: 70px solid transparent;
   z-index: 0;
