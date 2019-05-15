@@ -1,5 +1,7 @@
 # GoCD monitor
 
+![screenshot](screenshot.png)
+
 This project is a really simple but opinionated monitor for [GoCD](https://go.cd)
 with the main idea of representing active pipelines first so it is usable
 in a TV screen when you have dozens of pipelines.
