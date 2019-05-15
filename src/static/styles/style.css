@@ -17,15 +17,19 @@
 
 body {
   font-family: 'Roboto';
-  font-size: 20px;
-  background: #f3f2f3;
+  font-size: 30px;
+  background: #030203;
+}
+
+#passed {
+  margin-top: 30px;
 }
 
 #passed .group {
   float: left;
   width: 300px;
   height: 150px;
-  margin: 8px;
+  margin: 16px;
   padding: 8px;
   word-wrap: break-word;
   text-align: center;
@@ -34,71 +38,76 @@ body {
 .group .stage {
   display: inline-block;
   margin: 8px 8px 8px 20px;
-  padding: 8px 8px 8px 56px;
+  padding: 8px;
   position: relative;
-  width: 200px;
-  height: 76px;
+  width: 270px;
+  height: 123px;
 }
+
+.group .stage + .stage {
+  padding-left: 80px;
+}
+
 
 .group .stage h4 {
   overflow: hidden;
 }
 
-.group .stage:before {
+.group .stage + .stage:before {
   content: "";
   position: absolute;
   left: 0; 
   bottom: 0;
   width: 0;
   height: 0;
-  border-left: 46px solid #f3f2f3;
-  border-top: 46px solid transparent;
-  border-bottom: 46px solid transparent;
+  border-left: 70px solid #030203;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
   z-index: 0;
 }
 
 .group .stage.unknown:after {
   content: "";
   position: absolute;
-  right: -46px;
+  right: -70px;
   bottom: 0;
   width: 0;
   height: 0;
-  border-left: 46px solid #ffc11b;
-  border-top: 46px solid transparent;
-  border-bottom: 46px solid transparent;
+  border-left: 70px solid #ffc11b;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
   z-index: 1;
 }
 
 .group .stage.failed:after {
   content: "";
   position: absolute;
-  right: -46px;
+  right: -70px;
   bottom: 0;
   width: 0;
   height: 0;
-  border-left: 46px solid #fa2d2d;
-  border-top: 46px solid transparent;
-  border-bottom: 46px solid transparent;
+  border-left: 70px solid #fa2d2d;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
   z-index: 1;
 }
 
 .group .stage.passed:after {
   content: "";
   position: absolute;
-  right: -46px;
+  right: -70px;
   bottom: 0;
   width: 0;
   height: 0;
-  border-left: 46px solid #00c853;
-  border-top: 46px solid transparent;
-  border-bottom: 46px solid transparent;
+  border-left: 70px solid #00c853;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
   z-index: 1;
 }
 
 .group h3.group-name {
   font-size: 120%;
-  color: #353330;
+  color: #f1f1f1;
 }
 
 .group .stage h4 {
@@ -106,12 +115,12 @@ body {
 }
 
 .passed {
-  color: white;
+  color: #f1f1f1;
   background: #00c853;
 }
 
 .unknown {
-  color: white;
+  color: #f1f1f1;
   background: #ffc11b;
 }
 
@@ -124,7 +133,7 @@ body {
 }
 
 .failed {
-  color: white;
+  color: #f1f1f1;
   background: #fa2d2d;
 }
 
