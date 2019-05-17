@@ -46,8 +46,8 @@ function buildPage(groups) {
   container.removeChild(document.getElementById('failed'));
   container.removeChild(document.getElementById('passed'));
 
-  container.appendChild(unknown);
   container.appendChild(failed);
+  container.appendChild(unknown);
   container.appendChild(passed);
 }
 
