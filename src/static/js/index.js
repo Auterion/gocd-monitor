@@ -70,7 +70,7 @@ function createGroupEl(group) {
     if (group.pipelines[0] && group.pipelines[0].history) {
       const trigger = document.createElement('span');
       trigger.classList.add('trigger');
-      trigger.appendChild(document.createTextNode(group.pipelines[0].history.trigger.replace('modified by', '').replace(/<.*>/, '')));
+      trigger.appendChild(document.createTextNode(group.pipelines[0].history.trigger.replace('modified by', '').replace(/<.*>/, '').trim()));
       body.appendChild(trigger);
     }
     root.appendChild(body);
@@ -96,7 +96,7 @@ function createGroupEl(group) {
       const trigger = document.createElement('span');
       trigger.classList.add('trigger');
       if (pipeline.history && pipeline.history.trigger.indexOf('modified') > -1) {
-          trigger.appendChild(document.createTextNode(pipeline.history.trigger.replace('modified by', '').replace(/<.*>/, '')));
+          trigger.appendChild(document.createTextNode(pipeline.history.trigger.replace('modified by', '').replace(/<.*>/, '').trim()));
       } else {
         trigger.innerHTML = '&nbsp;';
       }
