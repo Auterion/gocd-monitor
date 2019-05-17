@@ -62,6 +62,7 @@ function createGroupEl(group) {
     root.appendChild(title);
 
     const body = document.createElement('div');
+    body.classList.add('info');
     const label = document.createElement('span');
     label.classList.add('label');
     label.appendChild(document.createTextNode(group.label));
