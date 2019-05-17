@@ -61,9 +61,11 @@ async function getPipelineStatus() {
         group.label = pipeline.label;
 
         for (const stage of pipeline.history.stages) {
-          if (stage.result !== 'Passed') {
+          if (stage.result && stage.result !== 'Passed') {
             pipeline.status = stage.result;
-            group.status = stage.result || 'Unknown';
+            if (stage.result) {
+              group.status = stage.result;
+            }
           }
         }
       }
