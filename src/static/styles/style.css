@@ -87,7 +87,7 @@ body {
   width: 0;
   height: 0;
   border-left: 70px solid #0B1420;
-  border-top: 78px solid transparent;
+  border-top: 79px solid transparent;
   border-bottom: 70px solid transparent;
   z-index: 0;
 }
@@ -100,7 +100,7 @@ body {
   width: 0;
   height: 0;
   border-left: 70px solid #A8D2FF;
-  border-top: 78px solid transparent;
+  border-top: 79px solid transparent;
   border-bottom: 70px solid transparent;
   z-index: 1;
 }
@@ -179,10 +179,13 @@ h3, h4 {
 
 .label, .trigger {
   display: block;
-  opacity: 0.85;
+  opacity: 0.80;
   font-size: 70%;
   line-height: 150%;
-  font-weight: 400;
+  font-weight: 500;
+}
+.label {
+  text-indent: 5px;
 }
 .label:before {
   font-family: FontAwesome;
@@ -190,21 +193,18 @@ h3, h4 {
   width: 32px;
   display: inline-block;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.65;
   font-size: 16px;
-
+  text-indent: -8px;
 }
 
-.trigger {
-  padding-bottom: none;
 
-}
 .trigger:before {
   font-family: FontAwesome;
   content: "\f2bd";
   width: 32px;
   display: inline-block;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.65;
   font-size: 16px;
 }
