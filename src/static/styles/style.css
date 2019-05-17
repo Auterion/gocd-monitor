@@ -23,6 +23,17 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
+/* @font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style : normal;
+         src : url("http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0");
+         src : url("http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"),
+               url("http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"),
+               url("http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"),
+               url("http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"),
+               url("http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+} */
 
 body {
   font-family: 'Roboto';
@@ -159,19 +170,30 @@ h3, h4 {
   font-weight: inherit;
 }
 
-.label {
+.label, .trigger {
   display: block;
-  opacity: 0.85;
+  opacity: 0.75;
   font-size: 70%;
   font-weight: 400;
-  padding-bottom: 12px;
-
 }
+/* .label:before {
+  font-family: FontAwesome;
+  content: "\f126";
+  width: 32px;
+  display: inline-block;
+  text-align: left;
+
+} */
 
 .trigger {
-  display: block;
-  font-size: 70%;
-  opacity: 0.85;
-  font-weight: 400;
+  padding-bottom: none;
 
 }
+/* .trigger:before {
+  font-family: FontAwesome;
+  content: "\f2bd";
+  width: 32px;
+  display: inline-block;
+  text-align: left;
+
+} */
