@@ -184,9 +184,7 @@ h3, h4 {
   line-height: 150%;
   font-weight: 500;
 }
-.label {
-  text-indent: 5px;
-}
+
 .label:before {
   font-family: FontAwesome;
   content: "\f126";
@@ -195,7 +193,6 @@ h3, h4 {
   text-align: center;
   opacity: 0.65;
   font-size: 16px;
-  text-indent: -8px;
 }
 
 
