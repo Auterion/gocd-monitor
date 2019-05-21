@@ -2,6 +2,7 @@ const request = require('request-promise-native');
 
 const BASE_URL = process.env.GO_URL;
 const AUTH_TOKEN = process.env.GO_TOKEN;
+const PIPELINE_GROUP_FILTER = new RegExp(process.env.PIPELINE_GROUP_FILTER || '.*');
 
 function get(path, accept=undefined) {
   const uri = BASE_URL + '/go/api/' + path;
@@ -21,13 +22,15 @@ function get(path, accept=undefined) {
 async function getGroups() {
   const data = await get('config/pipeline_groups');
 
-  return data.map((group) => ({
-    name: group.name,
-    pipelines: group.pipelines.map((pipeline) => ({
-      name: pipeline.name,
-      stages: pipeline.stages,
-    })),
-  }));
+  return data
+    .filter((group) => PIPELINE_GROUP_FILTER.test(group.name))
+    .map((group) => ({
+      name: group.name,
+      pipelines: group.pipelines.map((pipeline) => ({
+        name: pipeline.name,
+        stages: pipeline.stages,
+      })),
+    }));
 }
 
 async function getPipelineHistory(pipeline) {

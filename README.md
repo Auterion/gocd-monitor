@@ -25,3 +25,12 @@ PORT=12333
 
 Run `yarn serve` and navigate to [http://localhost:12333](http://localhost:12333).
 
+## Optional Configuration
+
+All configuration happens with setting the corresponding environment variable.
+
+### PIPELINE_GROUP_FILTER
+
+A regular expression filter that matches pipeline groups.
+For example `PIPELINE_GROUP_FILTER='^web_.*'`.
+
