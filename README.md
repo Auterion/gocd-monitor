@@ -28,7 +28,7 @@ Run `yarn serve` and navigate to [http://localhost:12333](http://localhost:12333
 ## Using Docker
 
 You can run the prebuilt docker container [auterion/gocd-monitor](https://hub.docker.com/r/auterion/gocd-monitor)
-by running `docker run --rm -e GO_URL=https://gocd.example.com GO_TOKEN=your_token auterion/gocd-monitor`.
+by running `docker run --rm -e GO_URL=https://gocd.example.com GO_TOKEN=your_token -p "12333:12333" auterion/gocd-monitor`.
 
 ## Optional Configuration
 
