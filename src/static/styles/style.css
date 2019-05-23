@@ -177,12 +177,16 @@ h3, h4 {
   left: 16px;
 }
 
-.label, .trigger {
+.label, .trigger, .modified {
   display: block;
   opacity: 0.80;
   font-size: 70%;
   line-height: 150%;
   font-weight: 500;
+}
+
+.modified {
+  font-size: 60%;
 }
 
 .label:before {
@@ -199,6 +203,16 @@ h3, h4 {
 .trigger:before {
   font-family: FontAwesome;
   content: "\f2bd";
+  width: 32px;
+  display: inline-block;
+  text-align: center;
+  opacity: 0.65;
+  font-size: 16px;
+}
+
+.modified:before {
+  font-family: FontAwesome;
+  content: "\f1da";
   width: 32px;
   display: inline-block;
   text-align: center;

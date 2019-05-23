@@ -17,7 +17,7 @@ function getData() {
       if (!response.ok) {
         throw new Error('HTTP error, status = ' + response.status);
       }
-      return response.json();
+      return response.json().then((d) => d.sort((a, b) => b.modified - a.modified));
     });
 }
 
@@ -73,6 +73,10 @@ function createGroupEl(group) {
       trigger.appendChild(document.createTextNode(group.pipelines[0].history.trigger.replace('modified by', '').replace(/<.*>/, '').trim()));
       body.appendChild(trigger);
     }
+    const modified = document.createElement('span');
+    modified.classList.add('modified');
+    modified.appendChild(document.createTextNode(new Date(group.modified).toLocaleString('de-CH')));
+    body.appendChild(modified);
     root.appendChild(body);
   } else {
     const h3 = document.createElement('h3');

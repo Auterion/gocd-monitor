@@ -39,6 +39,7 @@ async function getPipelineHistory(pipeline) {
   return history && {
     label: history.label,
     trigger: history.build_cause && history.build_cause.trigger_message || 'N/A',
+    modified: history.build_cause && Math.max(...history.build_cause.material_revisions.map((r) => r.modifications[0].modified_time)),
     stages: history.stages && history.stages.map((stage) => ({
       name: stage.name,
       result: stage.result,
@@ -58,6 +59,7 @@ async function getPipelineStatus() {
     group.status = 'Passed';
     for (const pipeline of group.pipelines) {
       pipeline.history = await getPipelineHistory(pipeline.name);
+      group.modified = pipeline.history && pipeline.history.modified;
       pipeline.status = 'Passed';
       if (pipeline.history && pipeline.history.stages) {
         pipeline.label = pipeline.history.label;
