@@ -44,6 +44,10 @@ body {
   padding: 1em;
 }
 
+#unknown {
+  margin-top: 30px;
+}
+
 #passed {
   margin-top: 30px;
 }
@@ -52,13 +56,12 @@ body {
   float: left;
   display: inline-grid;
   width: 268px;
-  height: 150px;
+  height: 160px;
   margin: 10px;
   padding: 24px;
   word-wrap: break-word;
   text-align: left;
   position: relative;
-
 }
 
 .group .stage {
@@ -66,11 +69,12 @@ body {
   margin: 8px;
   padding: 16px 8px 8px 16px;
   position: relative;
-  width: 268px;
+  width: 278px;
   height: 124px;
 }
 
 .group .stage + .stage {
+  width: 232px;
   padding-left: 80px;
 }
 
@@ -134,7 +138,7 @@ body {
 .group h3.group-name {
   font-size: 120%;
   color: #FFF;
-  padding-bottom: 24px;
+  padding: 0;
 }
 
 .group .stage h4 {
