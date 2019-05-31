@@ -147,11 +147,13 @@ body {
 
 .passed {
   color: #0B1420;
+  text-shadow: 0px 1px #b6e6c1;
   background: #7FCB90;
 }
 
 .unknown {
   color: #0B1420;
+  text-shadow: 0px 1px #cfe6ff;
   background: #A8D2FF;
 }
 
@@ -165,6 +167,7 @@ body {
 
 .failed {
   color: #0B1420;
+  text-shadow: 0px 1px #ff7b87;
   background: #D95662;
 }
 
